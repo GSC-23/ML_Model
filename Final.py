@@ -14,9 +14,9 @@ from datetime import datetime
 from datetime import date
 
 # Change the path
-model = tensorflow.keras.models.load_model('E:\Codes\GSC\weights.best.basic_mlp.hdf5', compile=False)      
+model = tensorflow.keras.models.load_model('weights.best.basic_mlp.hdf5', compile=False)      
 # Fetch the service account key JSON file contents
-cred = credentials.Certificate('E:\Codes\GSC\gsc-project.json')     # Change the path
+cred = credentials.Certificate('gsc-project.json')     # Change the path
 # Initialize the app with a service account, granting admin privileges
 firebase_admin.initialize_app(cred)
 
