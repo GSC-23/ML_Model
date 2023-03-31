@@ -4,10 +4,9 @@ import librosa
 import numpy as np 
 import pickle
 
-model = tensorflow.keras.models.load_model('E:\Codes\GSC\weights.best.basic_mlp.hdf5', compile=False)      # Change the path
+# Change the path
+model = tensorflow.keras.models.load_model('weights.best.basic_mlp.hdf5', compile=False)      
 
-# pickle_in = open('E:\Codes\GSC\model trained.p','rb')
-# model = pickle.load(pickle_in)
 
 def extract_feature(file_name):
    
@@ -35,7 +34,6 @@ def print_prediction(file_name):
     else:
       print("Accuracy:",1-array[3])
       print("No Dog Detected")
-    # print("The predicted class is:", array, '\n') 
     
 filename = input("Enter full path of audio(.wav) file: ") 
 print_prediction(filename) 
